@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('attacks', function (Blueprint $table) {
+        Schema::table('actions', function (Blueprint $table) {
             $table->dropColumn('rr');
     });
 }
