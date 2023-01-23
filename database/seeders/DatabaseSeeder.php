@@ -2927,7 +2927,7 @@ VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across 
 
 \App\Models\Creature::get()->each(function ($m){collect($m->attacks)->each(function ($a) use($m){$attack = array_merge(['creature_id' => $m->id],$a);if ($attack['name'] == "Spellcasting") return;$action = \App\Models\Action::create($attack);return $action;});});
 
-\App\Models\Creature::get()->each(function ($m){collect($m->multiattacks)->each(function ($a) use($m){$attack = array_merge(['creature_id' => $m->id],$a);$action = \App\Models\Action::create($attack);return $action;});});
+\App\Models\Creature::get()->each(function ($m){collect($m->multiattacks)->each(function ($a) use($m){$attack = array_merge(['creature_id' => $m->id],$a);\Log::info($m->name);$action = \App\Models\Action::create($attack);return $action;});});
 
 }
 }
