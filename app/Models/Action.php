@@ -11,7 +11,7 @@ class Action extends Model
     public $timestamps = false;
     protected $guarded = ['id'];
     protected $casts = [
-      'attacks' => 'array',
+      'actions' => 'array',
     ];
 
     public function creature() {
