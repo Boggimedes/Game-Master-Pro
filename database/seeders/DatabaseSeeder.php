@@ -2931,10 +2931,10 @@ VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across 
             ['creature_id' => $m->id],$a);
         if ($attack->name == "Spellcasting") return;
         $damageArray = explode("+", $attack->damage);
-        $damageBonus = intval(explode(" ", $damageArray)[0]);
+        if (count($damageArray) > 1 ) {
+        $damageBonus = intval(explode(" ", $damageArray[1])[0]);
         $proficiency = intval($attack->bonus) - $damageBonus;
-        if (count($damageArray) > 1 
-            && $proficiency >= $m->proficiency) {
+        if ($proficiency >= $m->proficiency) {
             $m->proficiency = $proficiency;
             $m->save();
             if ($m->str == $damageBonus) {
@@ -2946,7 +2946,8 @@ VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across 
                 $attack->damage = str_replace("+" . $damageBonus, "+{dex}", $attack->damage);
             }
         }
-        $action = \App\Models\Action::create($attack);
+    }
+    $action = \App\Models\Action::create($attack);
         return $action;
         });
     });
