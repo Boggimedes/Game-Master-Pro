@@ -2930,7 +2930,7 @@ VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across 
         $attack = (object)array_merge(
             ['creature_id' => $m->id],$a);
         if ($attack->name == "Spellcasting") return;
-        $damageArray = $attack->damage ? explode("+", $attack->damage) : [];
+        $damageArray = empty($attack->damage) ? [] : explode("+", $attack->damage);
         if (count($damageArray) > 1 ) {
         $damageBonus = intval(explode(" ", $damageArray[1])[0]);
         $proficiency = intval($attack->bonus) - $damageBonus;
