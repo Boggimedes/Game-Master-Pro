@@ -2938,11 +2938,11 @@ VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across 
             $m->proficiency = $proficiency;
             $m->save();
             if ($m->str == $damageBonus) {
-                $attack->bonus = "+{prof}+{str}";
+                $attack->bonus = "+{proficiency}+{str}";
                 $attack->damage = str_replace("+" . $damageBonus, "+{str}", $attack->damage);
             }
             if ($m->dex == $damageBonus) {
-                $attack->bonus = "+{prof}+{dex}";
+                $attack->bonus = "+{proficiency}+{dex}";
                 $attack->damage = str_replace("+" . $damageBonus, "+{dex}", $attack->damage);
             }
         }
