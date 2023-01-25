@@ -2947,7 +2947,7 @@ VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across 
             }
         }
     }
-    $action = \App\Models\Action::create($attack);
+    $action = \App\Models\Action::create((array)$attack);
         return $action;
         });
     });
