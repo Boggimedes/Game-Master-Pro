@@ -161,6 +161,7 @@ class CreateBase extends Migration
             $table->text('multiattacks')->nullable();
             $table->text('spellcasting')->nullable();
             $table->string('image')->nullable();
+            $table->integer('proficiency')->default(0);
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
