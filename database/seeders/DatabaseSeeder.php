@@ -2927,7 +2927,7 @@ VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across 
 
 \App\Models\Creature::get()->each(function ($m){
     collect($m->attacks)->each(function ($a) use($m){
-        $attack = array_merge(
+        $attack = (object)array_merge(
             ['creature_id' => $m->id],$a);
         if ($attack['name'] == "Spellcasting") return;
         $damageArray = explode("+", $attack->damage);
