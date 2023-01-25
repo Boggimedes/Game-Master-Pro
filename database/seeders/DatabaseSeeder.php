@@ -2925,9 +2925,46 @@ DB::insert("INSERT INTO `creatures` (`name`, `page`, `challenge_rating`, `desc`,
 VALUES ('Abominable yeti','306','9','A yeti\'s windborne howl sounds out across remote mountains, striking fear into the hearts of the scattered miners and herders that dwell there. These hulking creatures stalk alpine peaks in a ceaseless hunt for food. Their snow-white fur lets them move like ghosts against the frozen landscape. A yeti\'s icy simian eyes can freeze its prey in place. \nAbominable Yetis. An abominable yeti is larger than a normal yeti, standing three times as tall as a human. It typically lives and hunts alone, though a pair of abominable yetis might live together long enough to raise young. These towering yetis are highly territorial and savage, attacking and devouring any warm-blooded creatures they encounter, then scattering the bones across the ice and snow.','40ft., climb 40ft.','15','natural armor','11d12+66',0,7,0,6,-1,1,-1,7,0,6,-1,1,-1,'darkvision 60ft., passive Perception 15','<div><strong>Fear of Fire</strong> If the yeti takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn.&nbsp;<br /><br /></div>\n<div><strong>Keen Smell</strong> The yeti has advantage on Wisdom (Perception) checks that rely on smell.&nbsp;<br /><br /></div>\n<div><strong>Snow Camouflage</strong>&nbsp;The yeti has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.</div>','Huge Monstrosity','arctic,cave,mountain','[{\"name\":\"Perception\",\"bonus\":\"5\"}]','','[]','[{\"name\":\"Chilling Gaze\",\"bonus\":\"\",\"damage\":\"DC 18 Con save against this magic or take 6d6 cold damage and then be paralyzed for 1 minute, unless it is immune to cold damage. {tooltip}The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If the target\'s saving throw is successful, or if the effect ends on it, the target is immune to this yeti\'s gaze for 1 hour.&nbsp;{tooltip}\",\"special\":\"Target must be able to see Yeti\",\"rr\":\"30ft\"},{\"name\":\"Claw\",\"bonus\":\"11\",\"damage\":\"2d6+7 ⚔️ plus 2d6 cold damage\",\"special\":\"\"},{\"name\":\"Cold Breath\",\"bonus\":\"\",\"damage\":\"The yeti exhales frigid air.&nbsp;10d8 cold damage,&nbsp;DC 18 Con save for half.&nbsp;\",\"special\":\"Recharge 6\",\"rr\":\"30-foot cone\"}]','Abominable yeti.png'
 ,1,1,'[{\"name\":\"Gaze & Claws\",\"type\":\"multiattack\",\"actions\":[\"Chilling Gaze\",\"Claw\",\"Claw\"]}]')");
 
-\App\Models\Creature::get()->each(function ($m){collect($m->attacks)->each(function ($a) use($m){$attack = array_merge(['creature_id' => $m->id],$a);if ($attack['name'] == "Spellcasting") return;$action = \App\Models\Action::create($attack);return $action;});});
+\App\Models\Creature::get()->each(function ($m){
+    collect($m->attacks)->each(function ($a) use($m){
+        $attack = array_merge(
+            ['creature_id' => $m->id],$a);
+        if ($attack['name'] == "Spellcasting") return;
+        $damageArray = explode("+", $attack->damage);
+        $damageBonus = intval(explode(" ", $damageArray)[0]);
+        $proficiency = intval($attack->bonus) - $damageBonus;
+        if (count($damageArray) > 1 
+            && $proficiency >= $m->proficiency) {
+            $m->proficiency = $proficiency;
+            $m->save();
+            if ($m->str == $damageBonus) {
+                $attack->bonus = "+{prof}+{str}";
+                $attack->damage = str_replace("+" . $damageBonus, "+{str}", $attack->damage);
+            }
+            if ($m->dex == $damageBonus) {
+                $attack->bonus = "+{prof}+{dex}";
+                $attack->damage = str_replace("+" . $damageBonus, "+{dex}", $attack->damage);
+            }
+        }
+        $action = \App\Models\Action::create($attack);
+        return $action;
+        });
+    });
 
-\App\Models\Creature::get()->each(function ($m){collect($m->multiattacks)->each(function ($a) use($m){$attack = array_merge(['creature_id' => $m->id],$a);\Log::info($m->name);$action = \App\Models\Action::create($attack);return $action;});});
+\App\Models\Creature::get()->each(function ($m){
+    collect($m->multiattacks)->each(function ($a) use($m){
+        $attack = array_merge(
+            ['creature_id' => $m->id],$a);
+            $action = \App\Models\Action::create($attack);
+            return $action;
+        });
+    });
+
+    Schema::table('creatures', function (Blueprint $table) {
+        $table->dropColumn('attacks');
+        $table->dropColumn('multiattacks');
+        $table->dropColumn('page');
+    });
 
 }
 }
