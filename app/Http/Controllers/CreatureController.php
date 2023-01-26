@@ -29,7 +29,7 @@ class CreatureController extends Controller
             \Log::info($request->has('where'));
             \Log::info($request->all());
             \Log::info($request->where);
-            Paginator::setCurrentPage($request->page);
+            \Paginator::setCurrentPage($request->page);
             if (!empty($term) || $request->has('where')) {
                 \Log::info($whereStr);
                 $creatures = Creature::whereRaw($whereStr)->paginate(36)->toArray();
