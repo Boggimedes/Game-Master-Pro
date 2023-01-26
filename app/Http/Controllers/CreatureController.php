@@ -29,11 +29,11 @@ class CreatureController extends Controller
             \Log::info($request->has('where'));
             \Log::info($request->all());
             \Log::info($request->where);
-            \Paginator::setCurrentPage($request->page);
+
             if (!empty($term) || $request->has('where')) {
                 \Log::info($whereStr);
-                $creatures = Creature::whereRaw($whereStr)->paginate(36)->toArray();
-            } else $creatures = Creature::paginate(36)->toArray();
+                $creatures = Creature::whereRaw($whereStr)->paginate(36,['*'],$request->page)->toArray();
+            } else $creatures = Creature::paginate(36,['*'],$request->page)->toArray();
 
                 // ->union($creatures)
                 // ->where('name', 'LIKE', "%$term%");
