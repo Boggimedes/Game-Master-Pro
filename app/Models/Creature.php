@@ -66,8 +66,6 @@ class Creature extends Model
      * @var array
      */
     protected $casts = [
-        'attacks' => 'array',
-        'multiattacks' => 'array',
           'skills' => 'array',
         'legendary_actions' => 'array',
         'spellcasting' => 'object',
@@ -79,16 +77,16 @@ class Creature extends Model
 		return $this->belongsTo(User::class);
 	}
 
-    // public function actions() {
-    //     return $this->hasMany(Action::class);
-    // }
+    public function actions() {
+        return $this->hasMany(Action::class);
+    }
 
-    // public function getMultiattacksAttribute() {
-    //     return $this->actions()->where('type', 'multiattack')->get();
-    // }
+    public function getMultiattacksAttribute() {
+        return $this->actions()->where('type', 'multiattack')->get();
+    }
 
-    // public function getAttacksAttribute() {
-    //     return $this->actions()->where('type', 'attack')->get();
-    // }
+    public function getAttacksAttribute() {
+        return $this->actions()->where('type', 'attack')->get();
+    }
 
 }
