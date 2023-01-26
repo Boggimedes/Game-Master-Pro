@@ -32,8 +32,8 @@ class CreatureController extends Controller
 
             if (!empty($term) || $request->has('where')) {
                 \Log::info($whereStr);
-                $creatures = Creature::whereRaw($whereStr)->paginate(36,['*'],$request->page)->toArray();
-            } else $creatures = Creature::paginate(36,['*'],$request->page)->toArray();
+                $creatures = Creature::whereRaw($whereStr)->paginate(36,['*'],'page',$request->page)->toArray();
+            } else $creatures = Creature::paginate(36,['*'],'page',$request->page)->toArray();
 
                 // ->union($creatures)
                 // ->where('name', 'LIKE', "%$term%");
