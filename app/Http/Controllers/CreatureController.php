@@ -18,20 +18,15 @@ class CreatureController extends Controller
         $start = microtime(true);
         $creatures=[];
         if ($request->has('where')){
-            $whereStr=[];
-            foreach($request->get('where') as $key => $value){
-                $whereStr[]="`$key` = '$value'";
-            }
-            $whereStr = implode(" and ",$whereStr);
-            $whereStr='WHERE '.$whereStr;
-        }
-        if ($term) $whereStr = " WHERE `name` LIKE '%$term%'";
+            $whereStr = $request->get('where');
+            if ($term) $whereStr .= " AND `name` LIKE '%$term%'";
+        } else if ($term) $whereStr = " WHERE `name` LIKE '%$term%'";
 
         // $creatures = $me->creatures()->where('name', 'LIKE', "%$term%");
 
         // if(empty($me->settings->default_creatures) || $me->settings->default_creatures) {
-            if (!empty($term)) {
-                $creatures = Creature::where('name','like',"%$term%")->paginate(15)->toArray();
+            if (!empty($term) || $request->has('where')) {
+                $creatures = Creature::whereRaw($whereStr)->paginate(36)->toArray();
             } else $creatures = Creature::paginate(36)->toArray();
 
                 // ->union($creatures)
