@@ -25,6 +25,7 @@ class CreatureController extends Controller
         // $creatures = $me->creatures()->where('name', 'LIKE', "%$term%");
 
         // if(empty($me->settings->default_creatures) || $me->settings->default_creatures) {
+            \Log::info("where");
             \Log::info($request->has('where'));
             \Log::info($request->get('where'));
             if (!empty($term) || $request->has('where')) {
