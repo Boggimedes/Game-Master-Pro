@@ -27,7 +27,8 @@ class CreatureController extends Controller
         // if(empty($me->settings->default_creatures) || $me->settings->default_creatures) {
             \Log::info("where");
             \Log::info($request->has('where'));
-            \Log::info($request->get('where'));
+            \Log::info($request->input('where'));
+            \Log::info($request->where);
             if (!empty($term) || $request->has('where')) {
                 \Log::info($whereStr);
                 $creatures = Creature::whereRaw($whereStr)->paginate(36)->toArray();
