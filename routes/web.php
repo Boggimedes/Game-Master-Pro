@@ -21,8 +21,7 @@ Route::group(['prefix' => 'api'], function ($router) {
 	Route::put('creature', [CreatureController::class, 'updateCreature']);
 	Route::delete('creature', [CreatureController::class, 'deleteCreature']);
     Route::get('/region/{region}/edit-map', [WorldController::class, 'mapGenerator']);
-    // Route::get('creatures/{term?}', [CreatureController::class, 'getCreatures']);
-    Route::post('creatures/{term?}', [CreatureController::class, 'getCreatures']);
+    Route::get('creatures/{term?}', [CreatureController::class, 'getCreatures']);
 
 	Route::get('campaigns/{term?}', [StoryController::class, 'getCampaigns']);
 	Route::get('campaign', [StoryController::class, 'getCampaign']);
