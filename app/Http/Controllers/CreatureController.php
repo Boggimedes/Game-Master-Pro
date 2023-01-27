@@ -25,15 +25,10 @@ class CreatureController extends Controller
         // $creatures = $me->creatures()->where('name', 'LIKE', "%$term%");
 
         // if(empty($me->settings->default_creatures) || $me->settings->default_creatures) {
-            \Log::info("where");
-            \Log::info($request->has('where'));
-            \Log::info($request->all());
-            \Log::info($request->where);
 
             if (!empty($term) || $request->has('where')) {
-                \Log::info($whereStr);
-                $creatures = Creature::whereRaw($whereStr)->paginate(36,['*'],'page',$request->page)->toArray();
-            } else $creatures = Creature::paginate(36,['*'],'page',$request->page)->toArray();
+                $creatures = Creature::whereRaw($whereStr)->orderBy('name')->paginate(36,['*'],'page',$request->page)->toArray();
+            } else $creatures = Creature::orderBy('name')->paginate(36,['*'],'page',$request->page)->toArray();
 
                 // ->union($creatures)
                 // ->where('name', 'LIKE', "%$term%");
