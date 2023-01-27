@@ -58,7 +58,7 @@ class Creature extends Model
     protected $hidden = [
     ];
 
-    // protected $appends = ['multiattacks','attacks'];
+    protected $appends = ['multiattacks','attacks'];
 
     /**
      * The attributes that should be cast to native types.
