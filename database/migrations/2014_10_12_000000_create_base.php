@@ -92,7 +92,6 @@ class CreateBase extends Migration
         Schema::create('scenes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->integer('effect_id')->unsigned();
             $table->string('name');
             $table->string('img');
             $table->text('desc');
@@ -101,7 +100,6 @@ class CreateBase extends Migration
             $table->integer('fade_out')->default(2);
             $table->boolean('scene_solo')->default(0);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('effect_id')->references('id')->on('effects')->onDelete('cascade');
             $table->timestamps();
         });
 		Schema::create('collection_scene', function (Blueprint $table) {
@@ -301,7 +299,7 @@ class CreateBase extends Migration
             
         //     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         // });
-		Schema::create('campaign_collections', function (Blueprint $table) {
+		Schema::create('campaign_collection', function (Blueprint $table) {
 			// keys
 			$table->integer('campaign_id')->unsigned()->nullable();
 			$table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
