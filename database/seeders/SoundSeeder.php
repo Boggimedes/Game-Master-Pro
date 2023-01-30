@@ -49,7 +49,7 @@ DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Dela
 
 DB::insert("INSERT INTO `collections` (`name`,`id`,`desc`, `user_id`) VALUES ('Default Collection',1,'All Default Scenes',1)");
 
-DB::insert("INSERT INTO `scenes` (`name`,`user_id`,`desc`,`vol`,`fade_id`,`fade_out`,`scene_solo`,`img`,`id`) 
+DB::insert("INSERT INTO `scenes` (`name`,`user_id`,`desc`,`volume`,`fade_id`,`fade_out`,`scene_solo`,`img`,`id`) 
 VALUES ('Beach',1,'Simple waves crashing on a beach',80,2,2,0,'scene-shore.png',1),
 ('Bee Swarm',1,'',80,2,2,0,'scene-beeswarm.png',2),
 ('Thunderstorm',1,'Thunderstorm',80,2,2,0,'scene-thunderstorm.png',3),
