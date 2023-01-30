@@ -66,7 +66,9 @@ class Creature extends Model
      * @var array
      */
     protected $casts = [
-          'skills' => 'array',
+        'skills' => 'array',
+        'old_attacks' => 'array',
+        'old_multiattacks' => 'array',
         'legendary_actions' => 'array',
         'spellcasting' => 'object',
     ];
