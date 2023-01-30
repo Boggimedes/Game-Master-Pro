@@ -53,7 +53,7 @@ DB::insert("INSERT INTO `collection_scene` (`id`,`collection_id`, `scene_id`) VA
 
 DB::insert("INSERT INTO `scene` (`name`,`user_id`,`desc`,`vol`,`fade_id`,`fade_out`,`scene_solo`,`img`,`id`) VALUES ('Beach',1,'Simple waves crashing on a beach',80,2,2,0,'scene-shore.png',1),('Bee Swarm',1,'',80,2,2,0,'scene-beeswarm.png',2),('Thunderstorm',1,'Thunderstorm',80,2,2,0,'scene-thunderstorm.png',3),('Combat Music',1,'Combat Music',80,2,2,0,'CombatMusic.png',4),('Dungeon',1,'General background dungeon sounds',80,2,2,0,'scene-dungeon.png',5),('Forest Day',1,'Wind in the trees, birds, and rustling noinse',80,2,2,0,'scene-forest.png',6),('Large Skirmish',1,'Combat sounds, large group',80,2,2,0,'scene-combat.png',7),('Marketplace',1,'Marketplace',80,2,2,0,'scene-marketplace.png',8),('Forest Night',1,'Night sounds in the woods',80,2,2,0,'scene-forestnight.png',9),('Tavern',1,'Tavern sounds and music',80,2,2,0,'scene-tavern.png',10),('Bubbling Swamp',1,'Swamp noises',100,2,2,0,'scene-swamp.png',13),('large roaring fire',1,'large roaring fire',100,2,2,0,'scene-largefire.png',14)");
 
-DB::insert("INSERT INTO `scene_effect` (`id`,`scene_id`,`effect_id`) VALUES (1,10,8),(2,10,23),(3,10,21),(4,10,20),(5,10,22),(6,9,11),(7,8,19),(8,7,18),(9,6,17),(10,6,11),(11,6,15),(12,5,5),(13,5,9),(14,4,12),(15,3,6),(16,3,7),(17,2,4),(18,1,3),(41,13,32),(40,13,28),(39,13,29),(38,13,27),(42,13,34),(37,13,31),(43,13,33),(44,14,35)");
+DB::insert("INSERT INTO `scene_effect` (`scene_id`,`effect_id`) VALUES (10,8),(10,23),(10,21),(10,20),(10,22),(9,11),(8,19),(7,18),(6,17),(6,11),(6,15),(5,5),(5,9),(4,12),(3,6),(3,7),(2,4),(1,3),(13,32),(13,28),(13,29),(13,27),(13,34),(13,31),(13,33),(14,35)");
 
 
 }
