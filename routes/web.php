@@ -53,4 +53,22 @@ Route::group(['prefix' => 'api'], function ($router) {
     Route::post('region/{region}/create-poi', [WorldController::class, 'createPOI']);
     Route::delete('region/{region}/{type}/{i}/{npc}', [WorldController::class, 'detachNPC']);
 
+    // Route::get('user/{user}/sounds', [SoundController::class, 'attachScene']);
+    // Route::get('sound/', [SoundController::class, 'detachScene']);
+    // Route::post('collection/', [SoundController::class, 'createCollection']);
+    // Route::get('sound/', [SoundController::class, 'updateCollection']);
+    // Route::get('sound/', [SoundController::class, 'deleteCollection']);
+    // Route::get('sound/', [SoundController::class, 'createScene']);
+    // Route::get('sound/', [SoundController::class, 'updateScene']);
+    // Route::get('sound/', [SoundController::class, 'deleteScene']);
+    // Route::get('sound/', [SoundController::class, 'attachEffect']);
+    // Route::get('sound/', [SoundController::class, 'detachEffect']);
+    // Route::get('sound/', [SoundController::class, 'createEffect']);
+    // Route::get('sound/', [SoundController::class, 'updateEffect']);
+    // Route::get('sound/', [SoundController::class, 'deleteEffect']);
+    // Route::get('sound/', [SoundController::class, 'soundSearch']);
+    Route::get('user/{user}/sounds', [SoundController::class, 'fetchSounds']);
+    // Route::get('sound/', [SoundController::class, 'createSound']);
+    // Route::get('sound/', [SoundController::class, 'getSound']);
+
 });
