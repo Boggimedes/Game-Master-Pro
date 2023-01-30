@@ -305,7 +305,7 @@ class CreateBase extends Migration
 			$table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
 
 			$table->integer('collection_id')->unsigned()->nullable();
-			$table->foreign('collection_id') ->references('id')->on('scene_collections')->onDelete('cascade');
+			$table->foreign('collection_id') ->references('id')->on('collections')->onDelete('cascade');
 		});
 
         // Schema::create('map_items', function (Blueprint $table) {
