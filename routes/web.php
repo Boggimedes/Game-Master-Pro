@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreatureController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\WorldController;
-
+use App\Http\Controllers\SoundController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
