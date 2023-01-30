@@ -49,9 +49,22 @@ DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Dela
 
 DB::insert("INSERT INTO `collections` (`name`,`id`,`desc`, `user_id`) VALUES ('Default Collection',1,'All Default Scenes',1)");
 
+DB::insert("INSERT INTO `scene` (`name`,`user_id`,`desc`,`vol`,`fade_id`,`fade_out`,`scene_solo`,`img`,`id`) 
+VALUES ('Beach',1,'Simple waves crashing on a beach',80,2,2,0,'scene-shore.png',1),
+('Bee Swarm',1,'',80,2,2,0,'scene-beeswarm.png',2),
+('Thunderstorm',1,'Thunderstorm',80,2,2,0,'scene-thunderstorm.png',3),
+('Combat Music',1,'Combat Music',80,2,2,0,'CombatMusic.png',4),
+('Dungeon',1,'General background dungeon sounds',80,2,2,0,'scene-dungeon.png',5),
+('Forest Day',1,'Wind in the trees, birds, and rustling noinse',80,2,2,0,'scene-forest.png',6),
+('Large Skirmish',1,'Combat sounds, large group',80,2,2,0,'scene-combat.png',7),
+('Marketplace',1,'Marketplace',80,2,2,0,'scene-marketplace.png',8),
+('Forest Night',1,'Night sounds in the woods',80,2,2,0,'scene-forestnight.png',9),
+('Tavern',1,'Tavern sounds and music',80,2,2,0,'scene-tavern.png',10),
+('Bubbling Swamp',1,'Swamp noises',100,2,2,0,'scene-swamp.png',13),
+('large roaring fire',1,'large roaring fire',100,2,2,0,'scene-largefire.png',14)");
+
 DB::insert("INSERT INTO `collection_scene` (`collection_id`, `scene_id`) VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10)");
 
-DB::insert("INSERT INTO `scene` (`name`,`user_id`,`desc`,`vol`,`fade_id`,`fade_out`,`scene_solo`,`img`,`id`) VALUES ('Beach',1,'Simple waves crashing on a beach',80,2,2,0,'scene-shore.png',1),('Bee Swarm',1,'',80,2,2,0,'scene-beeswarm.png',2),('Thunderstorm',1,'Thunderstorm',80,2,2,0,'scene-thunderstorm.png',3),('Combat Music',1,'Combat Music',80,2,2,0,'CombatMusic.png',4),('Dungeon',1,'General background dungeon sounds',80,2,2,0,'scene-dungeon.png',5),('Forest Day',1,'Wind in the trees, birds, and rustling noinse',80,2,2,0,'scene-forest.png',6),('Large Skirmish',1,'Combat sounds, large group',80,2,2,0,'scene-combat.png',7),('Marketplace',1,'Marketplace',80,2,2,0,'scene-marketplace.png',8),('Forest Night',1,'Night sounds in the woods',80,2,2,0,'scene-forestnight.png',9),('Tavern',1,'Tavern sounds and music',80,2,2,0,'scene-tavern.png',10),('Bubbling Swamp',1,'Swamp noises',100,2,2,0,'scene-swamp.png',13),('large roaring fire',1,'large roaring fire',100,2,2,0,'scene-largefire.png',14)");
 
 DB::insert("INSERT INTO `scene_effect` (`scene_id`,`effect_id`) VALUES (10,8),(10,23),(10,21),(10,20),(10,22),(9,11),(8,19),(7,18),(6,17),(6,11),(6,15),(5,5),(5,9),(4,12),(3,6),(3,7),(2,4),(1,3),(13,32),(13,28),(13,29),(13,27),(13,34),(13,31),(13,33),(14,35)");
 
