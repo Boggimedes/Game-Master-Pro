@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('creatures', function (Blueprint $table) {
-                $table->dropColumn('attacks');
-                $table->dropColumn('multiattacks');
-                $table->dropColumn('page');
+            $table->dropColumn('old_attacks');
+            $table->dropColumn('old_multiattacks');
+            $table->dropColumn('page');
         });
     }
 

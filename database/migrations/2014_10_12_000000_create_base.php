@@ -155,8 +155,8 @@ class CreateBase extends Migration
             $table->text('skills')->nullable();
             $table->string('legendary')->nullable();
             $table->text('legendary_actions')->nullable();
-            $table->text('attacks')->nullable();
-            $table->text('multiattacks')->nullable();
+            $table->text('old_attacks')->nullable();
+            $table->text('old_multiattacks')->nullable();
             $table->text('spellcasting')->nullable();
             $table->string('image')->nullable();
             $table->integer('proficiency')->default(0);
