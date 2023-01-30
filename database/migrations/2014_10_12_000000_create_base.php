@@ -105,7 +105,7 @@ class CreateBase extends Migration
 		Schema::create('collection_scene', function (Blueprint $table) {
 			// keys
 			$table->integer('collection_id')->unsigned()->nullable();
-			$table->foreign('collection_id')->references('id')->on('scene_collections')->onDelete('cascade');
+			$table->foreign('collection_id')->references('id')->on('collections')->onDelete('cascade');
 
 			$table->integer('scene_id')->unsigned()->nullable();
 			$table->foreign('scene_id') ->references('id')->on('scenes')->onDelete('cascade');
