@@ -5,7 +5,7 @@ namespace App\Models;
 use \Illuminate\Database\Eloquent\Model;
 
 
-class SceneCollection extends Model
+class Collection extends Model
 {
     public $timestamps = false;
     /**

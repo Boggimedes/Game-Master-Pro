@@ -121,9 +121,9 @@ class User extends Authenticatable  {
 		return $this->hasMany(Sound::class, 'user_id');
 	}
     
-	public function sceneCollections()
+	public function collections()
 	{
-		return $this->hasMany(SceneCollection::class, 'user_id');
+		return $this->hasMany(Collection::class, 'user_id');
 	}
     
 	public function withSearchList()

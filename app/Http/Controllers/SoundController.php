@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\SceneCollection;
+use App\Models\Collection;
 use App\Models\User;
 use App\Models\Scene;
 use App\Models\Sound;
@@ -11,7 +11,7 @@ use App\Models\Effect;
 
 class SoundController extends Controller
 {
-        public function attachScene(Request $request, SceneCollection $collection, Scene $scene) {
+        public function attachScene(Request $request, Collection $collection, Scene $scene) {
             $me = \Auth::user();
             if(empty($me)) {
                 abort(401);
@@ -20,7 +20,7 @@ class SoundController extends Controller
 
             return response()->json($this->fetchSounds(null, $me));
         }
-        public function detachScene(Request $request, SceneCollection $collection, Scene $scene) {
+        public function detachScene(Request $request, Collection $collection, Scene $scene) {
             $me = \Auth::user();
             if(empty($me) || $me->id != $collection->user_id) {
                 abort(401);
@@ -40,11 +40,11 @@ class SoundController extends Controller
             'desc' => $request->get('desc',""),
             ];
 
-            $scene = SceneCollection::create($collectionData);
+            $scene = Collection::create($collectionData);
 
             return response()->json($this->fetchSounds(null, $me));
         }
-        public function updateCollection(Request $request, SceneCollection $collection) {
+        public function updateCollection(Request $request, Collection $collection) {
             $me = \Auth::user();
             if(empty($me) || $me->id != $collection->user_id) {
                 abort(401, "Cannot modify collections you didn't create");
@@ -65,7 +65,7 @@ class SoundController extends Controller
 
             return response()->json($this->fetchSounds(null, $me));
         }
-        public function deleteCollection(Request $request, SceneCollection $collection) {
+        public function deleteCollection(Request $request, Collection $collection) {
             $me = \Auth::user();
             if(empty($me) || $me->id != $collection->user_id) {
                 abort(401, "Cannot delete collections you didn't create");
@@ -75,7 +75,7 @@ class SoundController extends Controller
 
             return response()->json($this->fetchSounds(null, $me));
         }
-        public function createScene(Request $request, SceneCollection $collection = null) {
+        public function createScene(Request $request, Collection $collection = null) {
             $me = \Auth::user();
             if(empty($me)) {
                 abort(401);
@@ -221,7 +221,7 @@ class SoundController extends Controller
             // if(empty($me)) {
             //     abort(401);
             // }
-            $collections = $user->sceneCollections()->with('scenes.effects')->get();
+            $collections = $user->Collections()->with('scenes.effects')->get();
             $scenes = Scene::whereIn('user_id', [1, $user->id])->with('effects')->get();
             $effects = Effect::whereIn('user_id', [1, $user->id])->get();
             \Log::info($collections);
