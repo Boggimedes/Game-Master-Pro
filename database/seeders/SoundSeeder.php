@@ -129,7 +129,7 @@ DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (58,'large roaring fir
 DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (59,'Beach','ogg')");
 DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (60,'Bee Swarm','ogg')");
 DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (61,'Rain (Heavy)','ogg')");
-DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (62,'Thunder','ogg')";)
+DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (62,'Thunder','ogg')");
 DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (63,'Forest','ogg')");
 DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (64,'Forest','ogg')");
 DB::insert("INSERT INTO sounds (`id`,`name`,`ext`) VALUES (65,'Campfire','ogg')");
