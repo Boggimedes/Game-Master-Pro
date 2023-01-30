@@ -108,6 +108,7 @@ class CreateBase extends Migration
 			$table->foreign('collection_id')->references('id')->on('collections')->onDelete('cascade');
 
 			$table->integer('scene_id')->unsigned()->nullable();
+			$table->integer('order')->unsigned()->nullable();
 			$table->foreign('scene_id') ->references('id')->on('scenes')->onDelete('cascade');
 		});
 		Schema::create('scene_effect', function (Blueprint $table) {
