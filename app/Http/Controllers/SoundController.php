@@ -217,10 +217,10 @@ class SoundController extends Controller
             return response()->json($sounds);
         }
         public function fetchSounds(Request $request = null, User $user) {
-            $me = \Auth::user();
-            if(empty($me)) {
-                abort(401);
-            }
+            // $me = \Auth::user();
+            // if(empty($me)) {
+            //     abort(401);
+            // }
             $collections = $user->sceneCollections()->with('scenes.effects')->get();
             $scenes = Scene::whereIn('user_id', [1, $user->id])->with('effects')->get();
             $effects = Effect::whereIn('user_id', [1, $user->id])->get();
