@@ -119,10 +119,12 @@ class CreateBase extends Migration
 			$table->integer('effect_id')->unsigned()->nullable();
 			$table->foreign('effect_id')->references('id')->on('effects')->onDelete('cascade');
         });
-        Schema::create('sounds', function (Blueprint $table) {
+        Schema::create('sound_files', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->nullable();
-            $table->string('filename');
+            $table->text('keywords');
+            $table->string('ext',5);
+            $table->string('name');
             $table->timestamps();
         });
         Schema::create('creatures', function (Blueprint $table) {

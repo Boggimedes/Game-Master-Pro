@@ -5,7 +5,7 @@ namespace App\Models;
 use \Illuminate\Database\Eloquent\Model;
 
 
-class Sound extends Model
+class SoundFile extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -15,7 +15,7 @@ class Sound extends Model
     protected $fillable = [
         'name',
         'ext',
-        'tags',
+        'keywords',
         'user_id',
 ];
 
@@ -36,7 +36,6 @@ class Sound extends Model
     ];
 
     protected $appends = [
-        'filename'
     ];
 
 
@@ -46,7 +45,7 @@ class Sound extends Model
 	}
 
     public function getFilenameAttribute() {
-        return "https://game-master-pro.s3.us-west-2.amazonaws.com/sounds/" . $this->user_id . "/" . $this->id . "." . $this->ext;
+        // return "https://game-master-pro.s3.us-west-2.amazonaws.com/sounds/" . $this->user_id . "/" . $this->id . "." . $this->ext;
     }
 
 }
