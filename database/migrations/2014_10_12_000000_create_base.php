@@ -137,6 +137,7 @@ class CreateBase extends Migration
             $table->integer('pitch_var')->default(0);
             $table->integer('pitch_set')->default(0);
             $table->boolean('rand_loc')->default(0);
+            $table->boolean('reverb')->default(0);
             $table->integer('vol')->default(100);
             $table->boolean('randLoc')->default(0);
             $table->string('name');
