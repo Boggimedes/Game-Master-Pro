@@ -15,7 +15,6 @@ class Effect extends Model
     protected $fillable = [
         'name',
         'desc',
-        'sounds',
         'volume',
         'pre_delay',
         'loop',
@@ -48,5 +47,8 @@ class Effect extends Model
 	{
 		return $this->belongsTo(User::class);
 	}
-
+    public function sounds()
+    {
+        return $this->hasMany(Sound::class);
+    }
 }
