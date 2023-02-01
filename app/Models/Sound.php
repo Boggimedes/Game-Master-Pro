@@ -48,7 +48,7 @@ class Sound extends Model
         // return "https://game-master-pro.s3.us-west-2.amazonaws.com/sounds/" . $this->user_id . "/" . $this->id . "." . $this->ext;
     }
 
-    public getFileAttrbute() {
+    public function getFileAttrbute() {
         return $this->soundFile->name . '.' . $this->soundFile->ext;
     }
     
