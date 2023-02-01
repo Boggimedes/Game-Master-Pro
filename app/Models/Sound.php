@@ -41,7 +41,7 @@ class Sound extends Model
     protected $casts = [
     ];
 
-    protected $appends = [
+    protected $appends = ['file'
     ];
 
     public function getFilenameAttribute() {
