@@ -16,27 +16,27 @@ public function run()
 {
 
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Beach','Ocean Sounds',80,0,1,0,0,0,0,1,3)");
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keyword`,`ext`,`user_id`) VALUES (1,'Beach','ocean','ogg',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (1,'Beach','ocean','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`) VALUES ('Beach',3,1,2,2,100,0,0,60)");
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Bee Swarm','A swarm of angry bees',80,0,1,0,0,0,0,1,4)");
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keyword`,`ext`,`user_id`) VALUES (2,'Bee Swarm','bee insect buzz','ogg',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (2,'Bee Swarm','bee insect buzz','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`) VALUES ('Bee Swarm',4,2,5,5,100,0,0,50)");
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Misc dungeon','Random Dungeon Sounds (needs expansion)',40,1,1,20,90,0,0,1,5)");
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keyword`,`ext`,`user_id`) VALUES (3,'EFF Echo (Drip)01','nature water drip','wav',1)");
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keyword`,`ext`,`user_id`) VALUES (4,'EFF Echo (Drip) 02','nature water drip','wav',1)");
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keyword`,`ext`,`user_id`) VALUES (5,'EFF Echo (Drip) 03','nature water drip','wav',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (3,'EFF Echo (Drip)01','nature water drip','wav',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (4,'EFF Echo (Drip) 02','nature water drip','wav',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (5,'EFF Echo (Drip) 03','nature water drip','wav',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 01',5,3,0,0,34,100,0,66,1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 02',5,4,0,0,33,100,0,67,1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 03',5,5,0,0,33,100,0,68,1)");
 
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Heavy Rain','Sounds of heavy rain outdoors',80,0,1,0,0,0,0,1,6)");
 
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keyword`,`ext`,`user_id`) VALUES (6,'Rain (Heavy),'nature water rain','ogg',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (6,'Rain (Heavy),'nature water rain','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 01',6,6,2,2,100,0,0,60,1)");
 
 
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Thunder','Long duration thunder track',80,0,1,0,0,0,0,1,7)");
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keyword`,`ext`,`user_id`) VALUES (7,'Thunder,'nature thunder','ogg',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (7,'Thunder,'nature thunder','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 01',7,7,0,0,100,0,0,100,1)");
 
 
