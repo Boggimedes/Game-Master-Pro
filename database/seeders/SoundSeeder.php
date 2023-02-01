@@ -31,7 +31,7 @@ DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,
 
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Heavy Rain','Sounds of heavy rain outdoors',80,0,1,0,0,0,0,1,6)");
 
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (6,'Rain (Heavy),'nature water rain','ogg',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (6,'Rain (Heavy)','nature water rain','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 01',6,6,2,2,100,0,0,60,1)");
 
 
