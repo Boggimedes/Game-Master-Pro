@@ -51,7 +51,7 @@ class Sound extends Model
         // return "https://game-master-pro.s3.us-west-2.amazonaws.com/sounds/" . $this->user_id . "/" . $this->id . "." . $this->ext;
     }
     
-    public function soundFile() {
+    public function SoundFile() {
         return $this->hasOne(soundFile::class);
     }
 
