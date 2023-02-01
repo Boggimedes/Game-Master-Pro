@@ -36,7 +36,7 @@ DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,
 
 
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Thunder','Long duration thunder track',80,0,1,0,0,0,0,1,7)");
-DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (7,'Thunder,'nature thunder','ogg',1)");
+DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (7,'Thunder','nature thunder','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 01',7,7,0,0,100,0,0,100,1)");
 
 
