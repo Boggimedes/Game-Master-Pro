@@ -137,7 +137,6 @@ class CreateBase extends Migration
             $table->integer('pitch_var')->default(0);
             $table->integer('pitch_set')->default(0);
             $table->integer('vol')->default(100);
-            $table->integer('chance');
             $table->boolean('randLoc')->default(0);
             $table->string('name');
             $table->timestamps();
