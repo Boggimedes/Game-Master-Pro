@@ -14,9 +14,6 @@ class Sound extends Model
      */
     protected $fillable = [
         'name',
-        'ext',
-        'keywords',
-        'user_id',
         'effect_id',
         'fade_out',
         'fade_in',
@@ -52,7 +49,7 @@ class Sound extends Model
     }
     
     public function SoundFile() {
-        return $this->hasOne(soundFile::class);
+        return $this->hasOne(SoundFile::class);
     }
 
 }
