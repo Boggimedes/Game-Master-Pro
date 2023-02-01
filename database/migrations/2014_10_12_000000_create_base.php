@@ -127,6 +127,24 @@ class CreateBase extends Migration
             $table->string('name');
             $table->timestamps();
         });
+        Schema::create('sounds', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('effect_id')->unsigned()->nullable();
+            $table->integer('sound_file_id')->unsigned()->nullable();
+            $table->integer('fade_out')->default(0);
+            $table->integer('fade_in')->default(0);
+            $table->integer('chance')->default(100);
+            $table->integer('pitch_var')->default(0);
+            $table->integer('pitch_set')->default(0);
+            $table->integer('vol')->default(100);
+            $table->integer('chance');
+            $table->boolean('randLoc')->default(0);
+            $table->string('name');
+            $table->timestamps();
+
+			$table->foreign('effect_id')->references('id')->on('effects');
+			$table->foreign('sound_file_id')->references('id')->on('sound_files')->onDelete('cascade');
+        });
         Schema::create('creatures', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
