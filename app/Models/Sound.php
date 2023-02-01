@@ -47,6 +47,11 @@ class Sound extends Model
     public function getFilenameAttribute() {
         // return "https://game-master-pro.s3.us-west-2.amazonaws.com/sounds/" . $this->user_id . "/" . $this->id . "." . $this->ext;
     }
+
+    public getFileAttrbute() {
+        return $this->soundFile->name . '.' . $this->soundFile->ext;
+    }
+    
     
     public function SoundFile() {
         return $this->hasOne(SoundFile::class,'id','sound_file_id');
