@@ -18,10 +18,10 @@ public function run()
 DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Beach','Ocean Sounds',80,0,1,0,0,0,0,1,3)");
 DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (1,'Beach','ocean','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`) VALUES ('Beach',3,1,2,2,100,0,0,60)");
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Bee Swarm','A swarm of angry bees',80,0,1,0,0,0,0,1,4)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Bee Swarm','A swarm of angry bees',80,0,1,0,0,0,0,1,4)");
 DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (2,'Bee Swarm','bee insect buzz','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`) VALUES ('Bee Swarm',4,2,5,5,100,0,0,50)");
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Misc dungeon','Random Dungeon Sounds (needs expansion)',40,1,1,20,90,0,0,1,5)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Misc dungeon','Random Dungeon Sounds (needs expansion)',40,1,1,20,90,0,0,1,5)");
 DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (3,'EFF Echo (Drip)01','nature water drip','wav',1)");
 DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (4,'EFF Echo (Drip) 02','nature water drip','wav',1)");
 DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (5,'EFF Echo (Drip) 03','nature water drip','wav',1)");
@@ -29,19 +29,19 @@ DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 02',5,4,0,0,33,100,0,67,1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 03',5,5,0,0,33,100,0,68,1)");
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Heavy Rain','Sounds of heavy rain outdoors',80,0,1,0,0,0,0,1,6)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Heavy Rain','Sounds of heavy rain outdoors',80,0,1,0,0,0,0,1,6)");
 
 DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (6,'Rain (Heavy),'nature water rain','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 01',6,6,2,2,100,0,0,60,1)");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Thunder','Long duration thunder track',80,0,1,0,0,0,0,1,7)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Thunder','Long duration thunder track',80,0,1,0,0,0,0,1,7)");
 DB::insert("INSERT INTO `sound_files` (`id`,`name`,`keywords`,`ext`,`user_id`) VALUES (7,'Thunder,'nature thunder','ogg',1)");
 DB::insert("INSERT INTO `sounds` (`name`,`effect_id`,`sound_file_id`,`fade_out`,`fade_in`,`chance`,`pitch_var`,`pitch_set`, `vol`,`rand_loc`) VALUES ('Dripping 01',7,7,0,0,100,0,0,100,1)");
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Group Laughter','Group Laughter',100,1,1,10,50,0,0,1,8)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Group Laughter','Group Laughter',100,1,1,10,50,0,0,1,8)");
 DB::insert("INSERT INTO sound_files SET `id` = 8,`name` = 'GroupLaugh01', `ext` = 'wav',`keywords`='voice laugh'");
 DB::insert("INSERT INTO sound_files SET `id` = 9,`name` = 'GroupLaugh02', `ext` = 'wav',`keywords`='voice laugh'");
 DB::insert("INSERT INTO sound_files SET `id` = 10,`name` = 'GroupLaugh03', `ext` = 'wav',`keywords`='voice laugh'");
@@ -56,20 +56,20 @@ DB::insert("INSERT INTO sounds SET `effect_id` = 8, `sound_file_id` = 12,`name` 
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Cave Ambience','Wind and background noise',80,0,1,0,0,0,0,1,9)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Cave Ambience','Wind and background noise',80,0,1,0,0,0,0,1,9)");
 
 
 DB::insert("INSERT INTO sound_files SET `id` = 13, `name` = 'AMB Dungeon02', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 9, `sound_file_id` = 13,`vol` =  100,`pitch_set` =  0,`pitch_var` =  0,`chance` =  100,`fade_in` =  2,`fade_out` =  2");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Wind in the trees','Wind in the trees',80,0,1,0,0,0,0,1,10)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Wind in the trees','Wind in the trees',80,0,1,0,0,0,0,1,10)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 14,`name` = 'Wind in the Trees', `ext` = 'ogg'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 10, `sound_file_id` = 14, `vol` =  60,`pitch_set` =  0,`pitch_var` =  0,`chance` =  100,`fade_in` =  2,`fade_out` =  2");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Forest Rustling','Misc rustling sounds',80,1,1,20,90,0,0,1,11)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Forest Rustling','Misc rustling sounds',80,1,1,20,90,0,0,1,11)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 15, `name` = 'Rustling 01', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 11, `sound_file_id` = 15,`vol` =  25,`pitch_set` =  0,`pitch_var` =  100,`chance` =  12,`fade_in` =  1,`fade_out` =  1,`rand_loc` = 1");
@@ -82,20 +82,20 @@ DB::insert("INSERT INTO sound_files SET `id` = 17, `name` = 'Rustling 03', `ext`
 DB::insert("INSERT INTO sounds SET `effect_id` = 11, `sound_file_id` = 17,`vol` =  27,`pitch_set` =  0,`pitch_var` =  100,`chance` =  12,`fade_in` =  1,`fade_out` =  1,`rand_loc`= 1");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('CombatMusic','',80,0,1,0,0,0,0,1,12)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('CombatMusic','',80,0,1,0,0,0,0,1,12)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 18, `name` = 'FaithsEnd', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 12, `sound_file_id` = 18,`vol` =  40,`pitch_set` =  0,`pitch_var` =  0, reverb = 0, `chance` =  100,`fade_in` =  4,`fade_out` =  4,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Cave/Dungeon Ambience','',60,0,1,0,0,0,0,1,13)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Cave/Dungeon Ambience','',60,0,1,0,0,0,0,1,13)");
 
 
 DB::insert("INSERT INTO sound_files SET `id` = 19, `name` = 'AMB Dungeon02', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 13, `sound_file_id` = 19,`vol` =  100,`pitch_set` =  0,`pitch_var` =  0, reverb = 0, `chance` =  100,`fade_in` =  2,`fade_out` =  2,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Water Dripping and Echoing','',40,1,1,20,90,0,0,1,14)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Water Dripping and Echoing','',40,1,1,20,90,0,0,1,14)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 20, `name` = 'EFF Echo (Drip)01', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 14, `sound_file_id` = 20,`vol` =  66,`pitch_set` =  0,`pitch_var` =  100, reverb = 0, `chance` =  34,`fade_in` =  1,`fade_out` =  1,`rand_loc` = 1");
@@ -107,14 +107,14 @@ DB::insert("INSERT INTO sound_files SET `id` = 22, `name` = 'EFF Echo (Drip)05',
 DB::insert("INSERT INTO sounds SET `effect_id` = 14, `sound_file_id` = 21,`vol` =  68,`pitch_set` =  0,`pitch_var` =  100, reverb = 0, `chance` =  33,`fade_in` =  1,`fade_out` =  1, `rand_loc` = 1");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Wind in the Trees','',80,0,1,0,0,0,0,1,15)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Wind in the Trees','',80,0,1,0,0,0,0,1,15)");
 
 
 DB::insert("INSERT INTO sound_files SET `id` = 23, `name` = 'Wind in the Trees', `ext` = 'ogg'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 15, `sound_file_id` = 23,`vol` =  60,`pitch_set` =  0,`pitch_var` =  0, reverb = 0, `chance` =  100,`fade_in` =  2,`fade_out` =  2,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Brush Rustling','',80,1,1,20,90,0,0,1,16)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Brush Rustling','',80,1,1,20,90,0,0,1,16)");
 
 
 DB::insert("INSERT INTO sounds SET `effect_id` = 16, `sound_file_id` = 15,`vol` =  25,`pitch_set` =  0,`pitch_var` =  100,`reverb`= 0,`chance` =  12,`fade_in` =  1,`fade_out` =  1,`rand_loc`= 1");
@@ -124,7 +124,7 @@ DB::insert("INSERT INTO sounds SET `effect_id` = 16, `sound_file_id` = 16,`vol` 
 DB::insert("INSERT INTO sounds SET `effect_id` = 16, `sound_file_id` = 17,`vol` =  27,`pitch_set` =  0,`pitch_var` =  100,`reverb`= 0,`chance` =  12,`fade_in` =  1,`fade_out` =  1,`rand_loc`= 1");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Forest Birds','',80,1,1,0,30,0,0,1,17)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Forest Birds','',80,1,1,0,30,0,0,1,17)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 24,`name` = 'Bird09', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 17, `sound_file_id` = 24,`vol` =  80,`pitch_set` =  0,`pitch_var` =  200, reverb = 0, `chance` =  4,`fade_in` =  0,`fade_out` =  0,`rand_loc` = 1");
@@ -154,32 +154,32 @@ DB::insert("INSERT INTO sound_files SET `id` = 32,`name` = 'Bird01', `ext` = 'wa
 DB::insert("INSERT INTO sounds SET `effect_id` = 17, `sound_file_id` = 31,`vol` =  80,`pitch_set` =  0,`pitch_var` =  200, reverb = 0, `chance` =  12,`fade_in` =  0,`fade_out` =  0, `rand_loc` = 1");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Large Combat Background','',80,0,1,0,0,0,0,1,18)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Large Combat Background','',80,0,1,0,0,0,0,1,18)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 33,`name` = 'Large Skirmish 03', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 18, `sound_file_id` = 33,`vol` =  70,`pitch_set` =  0,`pitch_var` =  100, reverb = 0, `chance` =  100,`fade_in` =  2,`fade_out` =  2,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('City Marketplace','',80,0,1,0,0,0,0,1,19)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('City Marketplace','',80,0,1,0,0,0,0,1,19)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 34,`name` = 'City Marketplace', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 19, `sound_file_id` = 34,`vol` =  80,`pitch_set` =  0,`pitch_var` =  0, reverb = 0, `chance` =  100,`fade_in` =  2,`fade_out` =  2,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Tavern background','',65,0,1,0,0,0,0,1,20)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Tavern background','',65,0,1,0,0,0,0,1,20)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 35,`name` = 'Tavern background', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 20, `sound_file_id` = 35,`vol` =  100,`pitch_set` =  0,`pitch_var` =  0, reverb = 0, `chance` =  100,`fade_in` =  2,`fade_out` =  2,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Campfire','',25,0,1,0,0,1,0,1,21)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Campfire','',25,0,1,0,0,1,0,1,21)");
 
 
 DB::insert("INSERT INTO sound_files SET `id` = 36,`name` = 'Fire', `ext` = 'ogg'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 21, `sound_file_id` = 36,`vol` =  100,`pitch_set` =  0,`pitch_var` =  0, reverb = 0, `chance` =  100,`fade_in` =  2,`fade_out` =  2,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Tavern Non Vocal','',100,1,1,20,90,0,0,1,22)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Tavern Non Vocal','',100,1,1,20,90,0,0,1,22)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 37,`name` = 'EFF Tavern(Non Vocal)01', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 22, `sound_file_id` = 37,`vol` =  100,`pitch_set` =  0,`pitch_var` =  100, reverb = 0, `chance` =  14,`fade_in` =  1,`fade_out` =  1,`rand_loc` = 1");
@@ -203,7 +203,7 @@ DB::insert("INSERT INTO sound_files SET `id` = 43,`name` = 'EFF Tavern(Non Vocal
 DB::insert("INSERT INTO sounds SET `effect_id` = 22, `sound_file_id` = 43,`vol` =  100,`pitch_set` =  0,`pitch_var` =  100, reverb = 0, `chance` =  16,`fade_in` =  1,`fade_out` =  1, `rand_loc` = 1");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Tavern Music','',30,1,1,10,120,0,0,1,23)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Tavern Music','',30,1,1,10,120,0,0,1,23)");
 
 DB::insert("INSERT INTO sound_files SET `id` = 44,`name` = 'Tavern Song 1', `ext` = 'ogg'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 23, `sound_file_id` = 44,`vol` =  100,`pitch_set` =  0,`pitch_var` =  100, reverb = 0, `chance` =  16,`fade_in` =  1,`fade_out` =  1,`rand_loc` = 0");
@@ -224,19 +224,19 @@ DB::insert("INSERT INTO sound_files SET `id` = 49,`name` = 'Tavern Song 6', `ext
 DB::insert("INSERT INTO sounds SET `effect_id` = 23, `sound_file_id` = 49,`vol` =  100,`pitch_set` =  0,`pitch_var` =  100, reverb = 0, `chance` =  17,`fade_in` =  1,`fade_out` =  1,`rand_loc` = 0");
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Very soft wind','Very soft wind',100,0,1,0,0,0,0,1,27)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Very soft wind','Very soft wind',100,0,1,0,0,0,0,1,27)");
 DB::insert("INSERT INTO sound_files SET `id` = 50,`name` = 'very soft wind', `ext` = 'mp3'");
     DB::insert("INSERT INTO sounds SET `effect_id` = 27, `sound_file_id` = 50,`vol` = 80,`pitch_set` = 0,`pitch_var` = 50,`chance` = 100,`fade_in` = 2,`fade_out` = 2");
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Acid Bubbles','Acid Bubbles; 12 vol',80,0,1,1,20,1,0,1,28)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Acid Bubbles','Acid Bubbles; 12 vol',80,0,1,1,20,1,0,1,28)");
 DB::insert("INSERT INTO sound_files SET `id` = 51,`name` = 'Acid Bubbles', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 28, `sound_file_id` = 51,`vol` = 12,`pitch_set` = 0,`pitch_var` = 0,`chance` = 100,`fade_in` = 2,`fade_out` = 2");
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Buzzing Insects','3 different, sounds delay 20-120, randomized location',100,1,1,20,120,0,0,1,29)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Buzzing Insects','3 different, sounds delay 20-120, randomized location',100,1,1,20,120,0,0,1,29)");
 DB::insert("INSERT INTO `sound_files` SET `id` = 52,`name` = 'Buzzing Insect 01', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 29, `sound_file_id` = 52,`vol` = 60,`pitch_set` = 0,`pitch_var` = 100,`chance` = 33,`fade_in` = 1,`fade_out` = 1,`rand_loc` = 1");
 DB::insert("INSERT INTO `sound_files` SET `id` = 53,`name` = 'Buzzing Insect 02', `ext` = 'mp3'");
@@ -246,7 +246,7 @@ DB::insert("INSERT INTO sounds SET `effect_id` = 29, `sound_file_id` = 54,`vol` 
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Bubbling Mud','Random bubbling mud sounds',100,1,1,0,10,1,0,1,31)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Bubbling Mud','Random bubbling mud sounds',100,1,1,0,10,1,0,1,31)");
 DB::insert("INSERT INTO `sound_files` SET `id` = 55,`name` = 'mud bubble 01', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 31, `sound_file_id` = 55,`vol` = 75,`pitch_set` = 0,`pitch_var` = 200,`chance` = 100,`fade_in` = 0,`fade_out` = 0,`rand_loc` = 1");
 DB::insert("INSERT INTO `sound_files` SET `id` = 56,`name` = 'Squish Mud 03', `ext` = 'mp3'");
@@ -254,7 +254,7 @@ DB::insert("INSERT INTO sounds SET `effect_id` = 31, `sound_file_id` = 56,`vol` 
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Frogs','Misc croaking Frogs, no peepers',100,1,1,1,20,1,0,1,32)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Frogs','Misc croaking Frogs, no peepers',100,1,1,1,20,1,0,1,32)");
 DB::insert("INSERT INTO `sound_files` SET `id` = 57,`name` = 'scattered frogs', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 32, `sound_file_id` = 57,`vol` = 90,`pitch_set` = 0,`pitch_var` = 100,`chance` = 16,`fade_in` = 1,`fade_out` = 1,`rand_loc` = 1");
 DB::insert("INSERT INTO `sound_files` SET `id` = 58,`name` = 'frog 05', `ext` = 'mp3'");
@@ -266,7 +266,7 @@ DB::insert("INSERT INTO sounds SET `effect_id` = 32, `sound_file_id` = 60,`vol` 
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Swamp Birds','Sparse bird sounds',80,1,1,5,20,1,0,1,33)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('Swamp Birds','Sparse bird sounds',80,1,1,5,20,1,0,1,33)");
 DB::insert("INSERT INTO `sound_files` SET `id` = 61,`name` = 'Bird02', `ext` = 'wav'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 33, `sound_file_id` = 61,`vol` = 75,`pitch_set` = 0,`pitch_var` = 100,`chance` = 33,`fade_in` = 0,`fade_out` = 0,`rand_loc` = 1");
 DB::insert("INSERT INTO `sound_files` SET `id` = 62,`name` = 'Bird09', `ext` = 'wav'");
@@ -278,13 +278,13 @@ DB::insert("INSERT INTO sounds SET `effect_id` = 33, `sound_file_id` = 64,`vol` 
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('amb marsh insects','amb marsh insects',45,0,1,0,0,1,0,1,34)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('amb marsh insects','amb marsh insects',45,0,1,0,0,1,0,1,34)");
 DB::insert("INSERT INTO `sound_files` SET `id` = 65,`name` = 'amb marsh insects', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 34, `sound_file_id` = 65,`vol` = 10,`pitch_set` = 0,`pitch_var` = 0,`chance` = 100,`fade_in` = 1,`fade_out` = 1");
 
 
 
-DB::insert("INSERT INTO `effects` (`name`, `desc`, `sounds`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('large roaring fire','large roaring fire',100,0,1,0,0,0,0,1,35)");
+DB::insert("INSERT INTO `effects` (`name`, `desc`, `volume`, `pre_Delay`, `loop`, `delay_min`, `delay_max`, `optional`, `seq`, `user_id`, `id`)  VALUES ('large roaring fire','large roaring fire',100,0,1,0,0,0,0,1,35)");
 DB::insert("INSERT INTO `sound_files` SET `id` = 66,`name` = 'large roaring fire', `ext` = 'mp3'");
 DB::insert("INSERT INTO sounds SET `effect_id` = 35, `sound_file_id` = 66,`vol` = 85,`pitch_set` = 0,`pitch_var` = 0,`chance` = 100,`fade_in` = 2,`fade_out` = 2");
 
