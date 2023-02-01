@@ -52,7 +52,6 @@ class Sound extends Model
         return $this->soundFile->name . '.' . $this->soundFile->ext;
     }
     
-    
     public function SoundFile() {
         return $this->hasOne(SoundFile::class,'id','sound_file_id');
     }
