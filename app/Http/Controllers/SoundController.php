@@ -222,7 +222,7 @@ class SoundController extends Controller
             //     abort(401);
             // }
             $collections = $user->Collections()->with('scenes.effects')->get();
-            $scenes = Scene::whereIn('user_id', [1, $user->id])->with('effects')->get();
+            $scenes = Scene::whereIn('user_id', [1, $user->id])->with('effects','effects.sounds')->get();
             $effects = Effect::whereIn('user_id', [1, $user->id])->with('sounds')->get();
             \Log::info($collections);
                 if ($request) return response()->json(['collections' => $collections, 'scenes' => $scenes, 
