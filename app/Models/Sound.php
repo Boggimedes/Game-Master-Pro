@@ -5,7 +5,7 @@ namespace App\Models;
 use \Illuminate\Database\Eloquent\Model;
 
 
-class SoundFile extends Model
+class Sound extends Model
 {
     /**
      * The attributes that are mass assignable.
